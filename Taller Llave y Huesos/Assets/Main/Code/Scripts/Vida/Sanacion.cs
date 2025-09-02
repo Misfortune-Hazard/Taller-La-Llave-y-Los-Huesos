@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PUNTOS : MonoBehaviour
+public class Sanacion : MonoBehaviour
 {
-
     [SerializeField]
     private GameManager gameManager;
-
     private void OnTriggerEnter2D(Collider2D collision)
-
     {
-        if (collision.gameObject.tag == "Player")
 
+        Debug.Log("Colisión");
+        if (collision.tag == "Player")
         {
-            gameManager.SumarPuntos(1);
+            gameManager.SumarVida(10);
+            Debug.Log("Colisión");
             Destroy(this.gameObject);
+            //SceneManager.LoadScene(1);
+
         }
     }
-
 }
