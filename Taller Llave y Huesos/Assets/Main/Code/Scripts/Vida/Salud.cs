@@ -18,7 +18,7 @@ public class Salud : MonoBehaviour
     {
         saludActual = Mathf.Clamp(saludActual - _dano, 0, saludInicial);
 
-        if (saludActual > 0)
+        if (saludActual >- 0)
         {
 
 
