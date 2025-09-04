@@ -12,7 +12,7 @@ public class Tiempo : MonoBehaviour
     TextMeshProUGUI textoTiempo;
 
     [SerializeField]
-    float tiempoRestante;
+    public float tiempoRestante;
 
     private void Update()
 
@@ -31,5 +31,12 @@ public class Tiempo : MonoBehaviour
         int minutes = Mathf.FloorToInt(tiempoRestante / 60);
         int seconds = Mathf.FloorToInt(tiempoRestante % 60);
         textoTiempo.text = string.Format("{00:00}:{1:00}", minutes, seconds);
+    }
+
+    public void Sumartiempo(float segundos)
+
+    {
+        tiempoRestante += segundos;
+
     }
 }

@@ -2556,8 +2556,8 @@ GameObject:
   - component: {fileID: 586833372}
   - component: {fileID: 586833371}
   - component: {fileID: 586833370}
-  - component: {fileID: 586833373}
   - component: {fileID: 586833374}
+  - component: {fileID: 586833373}
   m_Layer: 0
   m_Name: Trampas
   m_TagString: Untagged
@@ -3063,7 +3063,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 586833367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90cd150ccc665a49b55c4213268a08d, type: 3}
+  m_Script: {fileID: 11500000, guid: ab00facbf3e3b4a4cae65b9235e6c3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1879686218}
@@ -4588,6 +4588,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &981497358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7544472253979427490, guid: c61d4e3ca6bee6f4d960c792c4168ad8, type: 3}
+  m_PrefabInstance: {fileID: 7130081316825067885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &981497359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981497358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f40aed7305dc9943b3f84679f26d5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1879686218}
+  Tiempo: {fileID: 1567929577}
+  segundosextra: 10
+--- !u!70 &981497362
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981497358}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.875, y: 0.65625}
+  m_Direction: 0
 --- !u!1 &983414962
 GameObject:
   m_ObjectHideFlags: 0
@@ -5682,7 +5737,7 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.04}
       - {x: 0.25, y: 0.01}
   m_UseDelaunayMesh: 0
---- !u!114 &1285557266
+--- !u!114 &1285557270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5691,7 +5746,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1285557260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9938de30e18904540abe5f669c4ed3c2, type: 3}
+  m_Script: {fileID: 11500000, guid: d8e13b3bb7306e146bcee11153c72bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1879686218}
@@ -23468,7 +23523,7 @@ PrefabInstance:
       addedObject: {fileID: 1285557265}
     - targetCorrespondingSourceObject: {fileID: 4842683974733824881, guid: c2db404d63bafda40b5364ba0aaebc90, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1285557266}
+      addedObject: {fileID: 1285557270}
   m_SourcePrefab: {fileID: 100100000, guid: c2db404d63bafda40b5364ba0aaebc90, type: 3}
 --- !u!1001 &7130081316825067885
 PrefabInstance:
@@ -23525,7 +23580,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7544472253979427490, guid: c61d4e3ca6bee6f4d960c792c4168ad8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 981497359}
+    - targetCorrespondingSourceObject: {fileID: 7544472253979427490, guid: c61d4e3ca6bee6f4d960c792c4168ad8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 981497362}
   m_SourcePrefab: {fileID: 100100000, guid: c61d4e3ca6bee6f4d960c792c4168ad8, type: 3}
 --- !u!1001 &8311815115884696024
 PrefabInstance:
