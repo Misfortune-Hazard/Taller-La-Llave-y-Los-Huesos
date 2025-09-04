@@ -9,12 +9,14 @@ public class Puerta : MonoBehaviour
 
     private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (gameManager.llave == 1)
 
         {
             gameManager.CompararLlaves(1);
+            gameManager.LlamarVictoria(1);
             Time.timeScale = 0;
         }
-
+        
     }
 }
+//collision.gameObject.tag == "Player" + 

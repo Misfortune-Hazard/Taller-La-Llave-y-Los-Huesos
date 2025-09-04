@@ -9,15 +9,13 @@ public class Obstáculo : MonoBehaviour
     [SerializeField]
     private GameManager gameManager;
 
-    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+        private void Update()
     {
-        if (collision.gameObject.tag == "Player")
+        if (gameManager.puntos == 10)
 
         {
-            gameManager.CompararPuntos(10);
             Destroy(this.gameObject);
         }
-
     }
 
 }

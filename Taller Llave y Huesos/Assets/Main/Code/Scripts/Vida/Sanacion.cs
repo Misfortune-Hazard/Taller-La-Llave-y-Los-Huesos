@@ -15,7 +15,6 @@ public class Sanacion : MonoBehaviour
             gameManager.SumarVida(10);
             Debug.Log("Colisión");
             Destroy(this.gameObject);
-            //SceneManager.LoadScene(1);
 
         }
     }

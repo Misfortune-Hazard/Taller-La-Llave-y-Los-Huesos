@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public int llave;
 
+    public int victoria;
+
     [SerializeField]
 
     private TMP_Text textoPuntos;
@@ -21,6 +23,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private TMP_Text textoLlave;
+
+    [SerializeField]
+    private TMP_Text textoVictoria;
 
     public void SumarPuntos(int cantidad)
     {
@@ -32,7 +37,6 @@ public class GameManager : MonoBehaviour
     {
         vida -= value;
         textoVida.text = "Vida: " + vida;
-
     }
 
     public void CompararPuntos(int value)
@@ -49,13 +53,21 @@ public class GameManager : MonoBehaviour
     {
         vida += value;
         textoVida.text = "Vida: " + vida;
-
     }
 
     public void SumarLlave(int claves)
     {
         llave += claves;
-        //textoLlave.text = "Llave: " + llave;
+        if (llave == 0)
+        {
+            textoLlave.text = "Llave: No";
+        }
+
+        else
+        {
+            textoLlave.text = "Llave: Si";
+        }
+
     }
 
     public void CompararLlaves(int value)
@@ -64,8 +76,14 @@ public class GameManager : MonoBehaviour
         if (llave == value)
         {
             llave = 0;
-            //textoLlave.text = "Puntos: " + llave;
         }
+    }
+
+    public void LlamarVictoria(int value)
+
+    {
+            victoria += value;
+            textoVictoria.text = "Ganaste";
     }
 
 }
