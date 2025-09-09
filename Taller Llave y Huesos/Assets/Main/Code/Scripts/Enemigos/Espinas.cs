@@ -10,11 +10,10 @@ public class Espinas : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        Debug.Log("Colisión");
+        
         if (collision.tag == "Player")
         {
             gameManager.RestarVida(20);
-            Debug.Log("Colisión");
             //SceneManager.LoadScene(1);
 
         }
