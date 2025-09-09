@@ -86,4 +86,42 @@ public class GameManager : MonoBehaviour
             textoVictoria.text = "Ganaste";
     }
 
+    public void EstadosDeJuego(string estado)
+    {
+        switch(estado)
+        {
+            case "Ganaste":
+                //
+                break;
+            case "Perdiste":
+                //
+                break;
+            case "Pausa":
+                //
+                break;
+            case "Jugando":
+                //
+                break;
+        }
+    }
+
+    public void ActualizarUI(string estado)
+    {
+        switch(estado)
+        {
+            case "Vida":
+                textoVida.text = "Vida: " + vida;
+                break;
+            case "Puntos":
+                textoPuntos.text = "Puntos: " + puntos;
+                break;
+            case "Victoria":
+                textoVictoria.text = "Ganaste";
+                break;
+            //case "Llave":
+                //
+                //break;
+        }
+    }
+
 }

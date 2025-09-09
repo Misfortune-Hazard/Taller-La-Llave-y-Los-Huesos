@@ -4495,7 +4495,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: .
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6726,7 +6726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runningTimer: 1
   textoTiempo: {fileID: 1567929578}
-  tiempoRestante: 60
+  tiempoRestante: 2
 --- !u!114 &1567929578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22826,6 +22826,19 @@ MonoBehaviour:
   rb2d: {fileID: 1972109201}
   fuerzasalto: 400
   direccionsalto: {x: 0, y: 1}
+--- !u!114 &1972109208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972109195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69519087e00d44c4e8b0e8884344028d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1879686218}
 --- !u!1 &1980411488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 722242591300925191, guid: 88d7853564bca6b49bae6c510a90ca62, type: 3}
@@ -23368,6 +23381,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6176787615481303844, guid: a3879484d58e7e84aae7907b2f321e29, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1972109205}
+    - targetCorrespondingSourceObject: {fileID: 6176787615481303844, guid: a3879484d58e7e84aae7907b2f321e29, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1972109208}
   m_SourcePrefab: {fileID: 100100000, guid: a3879484d58e7e84aae7907b2f321e29, type: 3}
 --- !u!1001 &5883962242517377663
 PrefabInstance:
