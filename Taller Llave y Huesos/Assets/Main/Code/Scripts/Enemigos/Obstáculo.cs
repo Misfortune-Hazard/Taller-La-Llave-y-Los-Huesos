@@ -11,7 +11,7 @@ public class Obstáculo : MonoBehaviour
 
         private void Update()
     {
-        if (gameManager.puntos == 10)
+        if (gameManager.puntos >= 10)
 
         {
             Destroy(this.gameObject);

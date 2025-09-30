@@ -12,7 +12,8 @@ public class Salud : MonoBehaviour
     {
         if (gameManager.vida <= 0)
         {
-            SceneManager.LoadScene(1);
+            gameManager.EstadosDeJuego("Perdiste");
+            //SceneManager.LoadScene(1);
         }
     }
 }

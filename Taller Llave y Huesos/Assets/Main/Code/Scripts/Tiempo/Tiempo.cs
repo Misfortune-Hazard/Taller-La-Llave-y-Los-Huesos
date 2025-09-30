@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Tiempo : MonoBehaviour
+
 {
     public bool runningTimer;
 
@@ -13,6 +14,9 @@ public class Tiempo : MonoBehaviour
 
     [SerializeField]
     public float tiempoRestante;
+
+    [SerializeField]
+    private GameManager gameManager;
 
     private void Update()
 
@@ -25,8 +29,9 @@ public class Tiempo : MonoBehaviour
         else if (tiempoRestante < 0)
 
         {
-            tiempoRestante = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameManager.EstadosDeJuego("Perdiste");
+            //tiempoRestante = 0;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         int minutes = Mathf.FloorToInt(tiempoRestante / 60);
         int seconds = Mathf.FloorToInt(tiempoRestante % 60);

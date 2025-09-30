@@ -13,7 +13,7 @@ public class Espinas : MonoBehaviour
         
         if (collision.tag == "Player")
         {
-            gameManager.RestarVida(20);
+            gameManager.RestarVida(1);
             //SceneManager.LoadScene(1);
 
         }

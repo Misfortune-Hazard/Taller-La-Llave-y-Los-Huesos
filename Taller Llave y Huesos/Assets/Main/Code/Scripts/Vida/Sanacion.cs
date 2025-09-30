@@ -12,7 +12,7 @@ public class Sanacion : MonoBehaviour
         Debug.Log("Colisión");
         if (collision.tag == "Player")
         {
-            gameManager.SumarVida(10);
+            gameManager.SumarVida(1);
             Debug.Log("Colisión");
             Destroy(this.gameObject);
 

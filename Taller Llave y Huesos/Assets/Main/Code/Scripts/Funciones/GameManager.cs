@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
     public void RestarVida(int value)
     {
         vida -= value;
-        textoVida.text = "Vida: " + vida;
+        //textoVida.text = "Vida: " + vida;
     }
 
     public void CompararPuntos(int value)
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
     public void SumarVida(int value)
     {
         vida += value;
-        textoVida.text = "Vida: " + vida;
+        //textoVida.text = "Vida: " + vida;
     }
 
     public void SumarLlave(int claves)
@@ -73,9 +74,10 @@ public class GameManager : MonoBehaviour
     public void CompararLlaves(int value)
 
     {
-        if (llave == value)
+        if (llave >= value)
         {
             llave = 0;
+            EstadosDeJuego("Ganaste");
         }
     }
 
@@ -83,7 +85,7 @@ public class GameManager : MonoBehaviour
 
     {
             victoria += value;
-            textoVictoria.text = "Ganaste";
+            //textoVictoria.text = "Ganaste";
     }
 
     public void EstadosDeJuego(string estado)
@@ -91,37 +93,19 @@ public class GameManager : MonoBehaviour
         switch(estado)
         {
             case "Ganaste":
-                //
+                SceneManager.LoadScene(1);
                 break;
             case "Perdiste":
-                //
+                SceneManager.LoadScene(3);
                 break;
             case "Pausa":
                 //
                 break;
             case "Jugando":
-                //
+                SceneManager.LoadScene(2);
                 break;
         }
     }
 
-    public void ActualizarUI(string estado)
-    {
-        switch(estado)
-        {
-            case "Vida":
-                textoVida.text = "Vida: " + vida;
-                break;
-            case "Puntos":
-                textoPuntos.text = "Puntos: " + puntos;
-                break;
-            case "Victoria":
-                textoVictoria.text = "Ganaste";
-                break;
-            //case "Llave":
-                //
-                //break;
-        }
-    }
-
+    
 }
