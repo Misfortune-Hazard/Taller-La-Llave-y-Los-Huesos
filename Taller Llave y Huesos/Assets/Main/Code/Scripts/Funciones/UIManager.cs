@@ -1,16 +1,34 @@
+//using Microsoft.Unity.VisualStudio.Editor;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
-   public void UpdateHearts(int currentLives, int maxLives)
+
+    [SerializeField]
+    private GameObject[] heartObject;
+    [SerializeField]
+    private Image[] heartSprite;
+    [SerializeField]
+    private GameManager gameManager;
+
+    public void UpdateHearts(int vida, int vidamax)
     {
-        if (hearts == null) return;
-        for (int i = 0; 1 < hearts.Length; i++)
+        //if (heartObject == null) return;
+        vida = gameManager.vida;
+        vidamax = 5;
+        for (int i = 0; i < vidamax; i++)
         {
-            if (hearts[i] |= null)
-                hearts[i].SetActive[i < currentLives];
+            if (vida == i)
+            heartSprite[i].enabled = false;
+        //if (heartObject[i] |= null)
+        //hearts[i].SetActive[i < currentLives];
         }
+
+        //heartObject[0].SetActive(false);
+
     }
+
 }

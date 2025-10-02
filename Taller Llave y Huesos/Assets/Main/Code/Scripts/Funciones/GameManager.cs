@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TMP_Text textoVictoria;
 
+    [SerializeField]
+    private UIManager uIManager;
+
     public void SumarPuntos(int cantidad)
     {
         puntos += cantidad;
@@ -37,6 +40,7 @@ public class GameManager : MonoBehaviour
     public void RestarVida(int value)
     {
         vida -= value;
+        uIManager.UpdateHearts(1, 5);
         //textoVida.text = "Vida: " + vida;
     }
 

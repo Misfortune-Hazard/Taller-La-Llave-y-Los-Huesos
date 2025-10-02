@@ -26,11 +26,11 @@ public class Tiempo : MonoBehaviour
         {
             tiempoRestante -= Time.deltaTime;
         }
-        else if (tiempoRestante < 0)
+        else if (tiempoRestante <= 0)
 
         {
+            tiempoRestante = 0;
             gameManager.EstadosDeJuego("Perdiste");
-            //tiempoRestante = 0;
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         int minutes = Mathf.FloorToInt(tiempoRestante / 60);
