@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(3);
                 break;
             case "Pausa":
-                //
+                SceneManager.LoadScene(5);
                 break;
             case "Jugando":
                 SceneManager.LoadScene(2);

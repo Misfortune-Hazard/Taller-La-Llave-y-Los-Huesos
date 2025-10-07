@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/LVL/Scenes/over game.unity
     guid: 6529fef4454302643b1aefddbc61c242
+  - enabled: 1
+    path: Assets/Main/LVL/Scenes/Main Menu.unity
+    guid: b3fe92ec5cdc58d4c85b5ef065b2ee95
   m_configObjects: {}
